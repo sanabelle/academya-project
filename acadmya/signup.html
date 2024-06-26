@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <title>Sign Up</title>
+    <style>
+        /* Your existing CSS here */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            background: rgb(255, 255, 255);
+            background: radial-gradient(circle, rgb(54, 54, 54) 0%, rgba(0, 0, 0, 0.61) 100%), url(../media/459-background.png);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        .form-box {
+            width: 90%;
+            max-width: 450px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 50px 60px 70px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .form-box h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #ff7708;
+            position: relative;
+        }
+        .form-box h1::after {
+            content: '';
+            width: 30px;
+            height: 4px;
+            border-radius: 3px;
+            background: #a04000;
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .input-field {
+            background: #eaeaea;
+            margin: 15px 0;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+        }
+        input {
+            width: 100%;
+            background: transparent;
+            border: 0;
+            outline: 0;
+            padding: 18px 15px;
+        }
+        .input-field .btn {
+            margin-left: 15px;
+            color: #999;
+        }
+        form p {
+            text-align: center;
+            font-size: 13px;
+        }
+        form p a {
+            text-decoration: none;
+            color: #a06000;
+        }
+        .btn-field {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn-field button {
+            flex-basis: 48%;
+            background-color: rgb(231 96 48);
+            color: #fff;
+            height: 40px;
+            border-radius: 20px;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            transition: background 1s;
+        }
+        .btn-field .disable {
+            background-color: #eaeaea;
+            color: #555;
+        }
+        .hidden {
+            display: none;
+        }
+        .toggle-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .toggle-buttons button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            background: #ff7708;
+            color: white;
+            cursor: pointer;
+        }
+        .toggle-buttons button.active {
+            background: #eaeaea;
+            color: #555;
+        }
+		
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <div class="toggle-buttons">
+                <button id="studentBtn" class="active" onclick="showStudentForm()">Student</button>
+                <button id="instructorBtn" onclick="showInstructorForm()">Instructor</button>
+            </div>
+            <form id="studentForm" method="post" action="signup.php" class="active-form">
+                <div class="input-field">
+                    <i class="fa-solid fa-user btn"></i>
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope btn"></i>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-lock btn"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="btn-field">
+                    <button type="submit" id="signupBtn">Sign Up</button>
+                </div>
+            </form>
+            <form id="instructorForm" method="post" action="signup_instructor.php" enctype="multipart/form-data" class="hidden">
+                <div class="input-field">
+                    <i class="fa-solid fa-user btn"></i>
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope btn"></i>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-lock btn"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-phone btn"></i>
+                    <input type="text" name="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-briefcase btn"></i>
+                    <input type="text" name="experience" placeholder="Experience" required>
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-camera btn"></i>
+                    <input type="file" name="profile_photo" required>
+                </div>
+                <div class="btn-field">
+                    <button type="submit" id="signupInstructorBtn">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        let studentForm = document.getElementById('studentForm');
+        let instructorForm = document.getElementById('instructorForm');
+        let studentBtn = document.getElementById('studentBtn');
+        let instructorBtn = document.getElementById('instructorBtn');
+
+        function showStudentForm() {
+            studentForm.classList.remove('hidden');
+            instructorForm.classList.add('hidden');
+            studentBtn.classList.add('active');
+            instructorBtn.classList.remove('active');
+        }
+
+        function showInstructorForm() {
+            studentForm.classList.add('hidden');
+            instructorForm.classList.remove('hidden');
+            studentBtn.classList.remove('active');
+            instructorBtn.classList.add('active');
+        }
+    </script>
+    <script src="./js/all.min.js"></script>
+</body>
+</html>

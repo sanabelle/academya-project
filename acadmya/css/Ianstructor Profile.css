@@ -1,0 +1,132 @@
+:root {
+    --primary-color: #0a0057;
+    --secondary-color: #3f00ee;
+    --text-color: #fff;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --btn-bg: #ff574a;
+    --btn-hover-bg: #383838;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background: url('../media/pexels-neo-853421-2653362.jpg') no-repeat center center/cover, var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-card {
+    background: var(--card-bg);
+    text-align: center;
+    padding: 40px 30px;
+    color: #383838;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px var(--shadow-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px var(--shadow-color);
+}
+
+.profile-card h1 {
+    color: var(--primary-color);
+}
+
+.profile-card img {
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+.profile-card h3 {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.profile-card p {
+    color: #555;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.btn-group {
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    background: #ff7708;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff770880;
+    transform: translateY(-5px);
+}
+
+.btn i {
+    margin-right: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

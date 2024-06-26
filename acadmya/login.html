@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .toggle-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        .toggle-btn {
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            background-color: #ff770880;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .toggle-btn.active {
+            background-color: #ff7708;
+        }
+        .form-container {
+            display: none;
+        }
+        .form-container.active {
+            display: block;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #ff7708;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .form-group button:hover {
+            background-color: #ff770880;
+        }
+        .error {
+            color: red;
+            margin-bottom: 1rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login Page</h1>
+        <div class="toggle-container">
+            <button class="toggle-btn active" onclick="toggleForm('student')">Student Login</button>
+            <button class="toggle-btn" onclick="toggleForm('instructor')">Instructor Login</button>
+        </div>
+        <div id="error-message" class="error"></div>
+        <div id="student-form" class="form-container active">
+            <h2>Student Login</h2>
+            <form id="studentLoginForm" action="login.php" method="POST" onsubmit="return validateForm('student')">
+                <div class="form-group">
+                    <label for="student_username">Username:</label>
+                    <input type="text" id="student_username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="student_password">Password:</label>
+                    <input type="password" id="student_password" name="password" required>
+                </div>
+                <input type="hidden" name="user_type" value="student">
+                <div class="form-group">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+        <div id="instructor-form" class="form-container">
+            <h2>Instructor Login</h2>
+            <form id="instructorLoginForm" action="login.php" method="POST" onsubmit="return validateForm('instructor')">
+                <div class="form-group">
+                    <label for="instructor_username">Username:</label>
+                    <input type="text" id="instructor_username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="instructor_password">Password:</label>
+                    <input type="password" id="instructor_password" name="password" required>
+                </div>
+                <input type="hidden" name="user_type" value="instructor">
+                <div class="form-group">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(userType) {
+            document.getElementById('student-form').classList.remove('active');
+            document.getElementById('instructor-form').classList.remove('active');
+            document.querySelector('.toggle-btn.active').classList.remove('active');
+            if (userType === 'student') {
+                document.getElementById('student-form').classList.add('active');
+                document.querySelectorAll('.toggle-btn')[0].classList.add('active');
+            } else {
+                document.getElementById('instructor-form').classList.add('active');
+                document.querySelectorAll('.toggle-btn')[1].classList.add('active');
+            }
+        }
+
+        function validateForm(userType) {
+            let username, password;
+            if (userType === 'student') {
+                username = document.getElementById('student_username').value;
+                password = document.getElementById('student_password').value;
+            } else {
+                username = document.getElementById('instructor_username').value;
+                password = document.getElementById('instructor_password').value;
+            }
+
+            if (username === '' || password === '') {
+                document.getElementById('error-message').innerText = 'Both fields are required';
+                document.getElementById('error-message').style.display = 'block';
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

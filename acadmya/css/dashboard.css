@@ -1,0 +1,153 @@
+/* dashboard.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info p {
+    margin-right: 20px;
+}
+
+.user-info a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.user-info a:hover {
+    text-decoration: underline;
+}
+
+.profile-section {
+    margin-bottom: 40px;
+}
+
+.profile-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profile-section form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.profile-section label {
+    grid-column: span 2;
+    font-size: 14px;
+    color: #333;
+}
+
+.profile-section input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.profile-section button {
+    grid-column: span 2;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.profile-section button[name="update_profile"] {
+    background-color: #ff7708;
+    color: #fff;
+}
+
+.profile-section button[name="update_profile"]:hover {
+    background-color: #ff770880;
+}
+
+.profile-section button[name="delete_profile"] {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.profile-section button[name="delete_profile"]:hover {
+    background-color: #c82333;
+}
+
+.dashboard-section {
+    margin-bottom: 40px;
+}
+
+.dashboard-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.course {
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.course a {
+    display: inline-block;
+    background-color: #ff7708;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+	margin: 3px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.course a:hover {
+    background-color: #ff770880;
+}

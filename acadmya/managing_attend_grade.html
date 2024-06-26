@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Attendance and Grades</title>
+	<style>
+	
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 5px 0 15px;
+}
+
+button {
+    background-color: #ff7708;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff770880;
+}
+
+#attendance-result, #grades-result {
+    margin-top: 20px;
+}
+	</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Manage Attendance</h1>
+
+        <div class="attendance-section">
+            <h2>Mark Attendance</h2>
+            <form id="attendance-form" method="POST" action="mark_attendance.php">
+                <label for="student_id">Student ID:</label>
+                <input type="number" id="student_id" name="student_id" required>
+
+                <label for="course_id">Course ID:</label>
+                <input type="number" id="course_id" name="course_id" required>
+
+                <label for="attendance_status">Attendance Status:</label>
+                <select id="attendance_status" name="attendance_status" required>
+                    <option value="present">Present</option>
+                    <option value="absent">Absent</option>
+                </select>
+
+                <button type="submit">Mark Attendance</button>
+            </form>
+            <div id="attendance-result"></div>
+        </div>
+    </div>
+    <script>
+// script.js
+document.getElementById('attendance-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(this);
+
+    fetch('mark_attendance.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('attendance-result').innerText = data;
+    })
+    .catch(error => console.error('Error:', error));
+});
+
+document.getElementById('view-grades-button').addEventListener('click', function() {
+    fetch('view_grades.php')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('grades-result').innerHTML = data;
+    })
+    .catch(error => console.error('Error:', error));
+});
+</script>
+</body>
+</html>

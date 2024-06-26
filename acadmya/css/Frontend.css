@@ -1,0 +1,331 @@
+
+nav{
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.301);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.15) ;
+  }
+  nav img{
+    width: 180px;
+    cursor: pointer;
+    margin-left: 150px;
+  }
+  nav .navgation{
+    display: flex;
+  }
+  #menu{
+   display: none;
+    font-size: 30px;
+  }
+  #close{
+    display: none;
+    font-size: 18px;
+  }
+  nav .navgation ul{
+    margin-right: 150px;
+    display: flex;
+    align-items: center;
+  }
+  nav .navgation ul li{
+    list-style: none;
+    color: black;
+    margin-left: 30px;
+  }
+  nav .navgation ul li a{
+    text-decoration: none;
+    color:  rgb(44, 44, 44);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.2s ease;
+  }
+  nav .navgation ul li a:hover{
+    color: #bb7f11;
+  }
+  .btn2 .blue2{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background-color: rgb(136, 65, 4);
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+  }
+  .Instructor{
+    border: 1px solid rgb(218, 106, 32);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  /* <!--Navgation--> */
+  
+
+
+
+.topDiv {
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    background-color: #ff6a00;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+
+.myButton1 {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+   color: black;
+    left: 25%;
+
+}
+
+.myButton2 {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    color: black;
+    left: 60%;
+}
+.myButton3 {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 110%;
+    left: 25%;
+    color: black;
+}
+.myButton4 {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 110%;
+    left: 60%;
+    color: black;
+}
+
+
+
+
+
+
+
+.myButton1 img {
+    width: 200px; 
+    height: 200px; 
+   
+}
+
+.myButton2 img {
+    width: 200px; 
+    height: 200px; 
+   
+}
+.myButton3 img {
+    width: 180px; 
+    height: 180px;
+    border: 0px;
+ }
+.myButton4 img {
+    width: 180px; 
+    height: 180px;
+    border: 0px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+.htmldiv{
+    /* div style */
+    position: absolute;
+    top: 50%;
+    left: -16%;
+    z-index: -1;
+    width:120%;
+    height:150%;
+    padding: 5px;
+    background-color: #ffffff;
+    transition: transform 0.2s ease;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.cssdiv{
+    /* div style */
+    position: absolute;
+    top: 50%;
+    left: -16%;
+    z-index: -1;
+    width:120%;
+    height:150%;
+    padding: 5px;
+    background-color: #ffffff;
+    transition: transform 0.2s ease;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.javascriptdiv{
+    /* div style */
+    position: absolute;
+    top: 50%;
+    left: -25%;
+    z-index: -1;
+    width:140%;
+    height:170%;
+    padding: 5px;
+    background-color: #ffffff;
+    transition: transform 0.2s ease;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+}
+.reactdiv{
+    /* div style */
+    position: absolute;
+    top: 50%;
+    left: -25%;
+    z-index: -1;
+    width:140%;
+    height:170%;
+    padding: 5px;
+    background-color: #ffffff;
+    transition: transform 0.2s ease;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+}
+
+
+
+
+
+
+.htmldiv:hover{
+    transform: scale(1.1);
+    background-color: #fcf2e5;
+}
+.cssdiv:hover{
+    transform: scale(1.1);
+    background-color: #fcf2e5;
+   
+}
+.javascriptdiv:hover{
+    transform: scale(1.1);
+    background-color: #fcf2e5;
+}
+.reactdiv:hover{
+    transform: scale(1.1);
+    background-color: #fcf2e5;
+}
+
+
+body{
+    background-color: rgb(242, 242, 242);
+}
+
+
+
+ h1{
+    position: absolute;
+    top: 90%; 
+    left: 33%;
+ }
+ /* p{
+    position: absolute;
+    top: 165%;
+    font-size: larger;
+    font-weight: bold;
+ }
+  */
+
+
+
+
+
+ @keyframes slidein {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+
+
+/* img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    animation: fadein 2s;
+} */
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* p {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    margin: 0 0 20px 0;
+    text-align: justify;
+    animation: slidein 2s;
+} */
+
+@keyframes slidein {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+
+
+
+ 
+
+
+
+
+
+

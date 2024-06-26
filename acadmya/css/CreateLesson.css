@@ -1,0 +1,97 @@
+/* Global Styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0; /* Change to your preferred background color */
+}
+
+/* Button Styles */
+
+.myButton {
+    width: 200px;
+    background-color: #ff7708;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.myButton:hover {
+    background-color: rgb(225, 133, 3);
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    font-weight: bold;
+}
+
+.button_link {
+    text-decoration: none;
+    color: white;
+}
+
+/* Heading Styles */
+
+.heading {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Course Styles */
+
+.outline {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 5px solid #ff8400;
+    background-color: #fff;
+}
+
+.course h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-choice {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.course-choice:hover {
+    color: #ff9500;
+}
+
+/* Background Image Styles */
+
+.imag-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.background-imag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    filter: blur(5px);
+}

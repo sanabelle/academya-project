@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Courses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/freecoures.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <img src="./media/WhatsApp Image 2024-04-26 at 04.19.19_c8aad5b3.png" alt="Logo">
+        <div class="navgation">
+            <i id="menu" class="fas fa-bars"></i>
+            <ul id="menuItems">
+                <i id="close" class="fas fa-times"></i>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#instructor">Instructor</a></li>
+            </ul>
+        </div>
+        <div class="btn2">
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Header -->
+        <header id="home">
+            <div class="aboute">
+                <h1>Study Plans HTML Made Easy</h1>
+            </div>
+            <div class="icons">
+                <button id="videos">Watch Videos</button>
+                <button id="pdf">View PDFs</button>
+            </div>
+        </header>
+
+        <!-- Course Sections -->
+        <section id="courses">
+            <div class="container">
+                <!-- Week 1 -->
+                <div class="title">
+                    <h1>Week 1 Courses</h1>
+                    <button class="toggle-btn" data-week="1">Toggle Week 1</button>
+                </div>
+                <div class="data" id="week1">
+                    <ul>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=6QAELgirvjs"><span>01</span> Introduction and What I Need To Learn</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=wI1Z9NfFXYI"><span>02</span> Difference Between Online and Offline Pages</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=zdyJZqADc8o"><span>03</span> Text Editors and The Dreamweaver</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=EQzfnz0t1_s"><span>04</span> Define And Utilize The Dreamweaver</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=p1FoW_XP-fM"><span>05</span> New Video - Simple Project to Practice HTML</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=dFgzHOX84xQ"><span>06</span> HTML Structure And Page</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=93VtlzFQsxQ"><span>07</span> HTML Head Elements</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=dV1UYJ8HE7E"><span>08</span> Paragraph And How To Control It</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=I06pygRQfvY"><span>09</span> Text Format Elements</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=Imozp0wwb-Q"><span>10</span> Anchor Link and Attribute </a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=foXsGwJj8ds"><span>11</span> Image And Its Attributes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Week 2 -->
+                <div class="title">
+                    <h1>Week 2 Courses</h1>
+                    <button class="toggle-btn" data-week="2">Toggle Week 2</button>
+                </div>
+                <div class="data" id="week2">
+                    <ul>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=0h1cBCo94xY"><span>01</span> New Lesson 1</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=4yWUxPY4kFk"><span>02</span> New Lesson 2</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=kTcN8yN1LgM"><span>03</span> New Lesson 3</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=aUzKPlxYqkM"><span>04</span> New Lesson 4</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=7Y02G4xBY8s"><span>05</span> New Lesson 5</a></li>
+                    </ul>
+                </div>
+
+                <!-- Week 3 -->
+                <div class="title">
+                    <h1>Week 3 Courses</h1>
+                    <button class="toggle-btn" data-week="3">Toggle Week 3</button>
+                </div>
+                <div class="data" id="week3">
+                    <ul>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=XYZ"><span>01</span> Lesson 1</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=XYZ"><span>02</span> Lesson 2</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=XYZ"><span>03</span> Lesson 3</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=XYZ"><span>04</span> Lesson 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instructor Section -->
+        <section id="instructor">
+            <div class="container">
+                <div class="title">
+                    <h1>Instructor</h1>
+                </div>
+                <div class="modal" id="modal">
+                    <div class="modal-content">
+                        <span class="close-btn">&times;</span>
+                        <h2>About the Instructor</h2>
+                        <p>This course is taught by a professional web developer with over 10 years of experience...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleBtns = document.querySelectorAll(".toggle-btn");
+            toggleBtns.forEach(btn => {
+                btn.addEventListener("click", function() {
+                    const weekNum = this.getAttribute("data-week");
+                    const weekData = document.getElementById(`week${weekNum}`);
+                    if (weekData) {
+                        weekData.classList.toggle("active");
+                    }
+                });
+            });
+
+            const menu = document.getElementById("menu");
+            const close = document.getElementById("close");
+            const menuItems = document.getElementById("menuItems");
+
+            menu.addEventListener('click', () => {
+                menuItems.style.display = 'flex';
+                close.style.display = 'block';
+                menu.style.display = 'none';
+            });
+
+            close.addEventListener('click', () => {
+                menuItems.style.display = 'none';
+                close.style.display = 'none';
+                menu.style.display = 'block';
+            });
+
+            // Smooth scrolling effect for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Modal functionality
+            const modal = document.getElementById("modal");
+            const closeModalBtns = document.querySelectorAll('.close-btn');
+
+            closeModalBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+            });
+
+            // Fade-in animation for modal
+            function fadeIn(element) {
+                element.style.opacity = 0;
+                element.style.display = 'flex';
+                let opacity = 0;
+                const interval = setInterval(function () {
+                    if (opacity < 1) {
+                        opacity += 0.1;
+                        element.style.opacity = opacity;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 50);
+            }
+
+            // Trigger fade-in animation for modal
+            fadeIn(modal);
+        });
+    </script>
+</body>
+</html>

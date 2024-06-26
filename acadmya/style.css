@@ -1,0 +1,109 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    width: 80%;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    background: #ff7708;
+    color: #fff;
+    padding: 15px;
+}
+
+.chat-header h1 {
+    font-size: 1.2rem;
+}
+
+.chat-main {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+.chat-sidebar {
+    background: #f4f4f4;
+    padding: 10px;
+    flex: 1;
+}
+
+.chat-sidebar h3 {
+    font-size: 1rem;
+}
+
+.chat-messages {
+    padding: 10px;
+    overflow-y: scroll;
+    flex: 4;
+}
+
+.chat-form-container {
+    background: #f4f4f4;
+    padding: 10px;
+}
+
+.chat-form-container input[type="text"],
+.chat-form-container button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 3px;
+    display: block;
+    width: calc(100% - 20px);
+}
+
+.chat-form-container input[type="text"] {
+    width: calc(50% - 20px);
+}
+
+.chat-form-container button {
+    background: #ff7708;
+    color: #fff;
+    cursor: pointer;
+}
+
+.chat-form-container button:hover {
+    background: #ff770880;
+}
+
+.chat-message {
+    background: #007bff;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 3px;
+    max-width: 80%;
+}
+
+.chat-message.user {
+    background: #28a745;
+}
+
+.chat-message.user::before {
+    content: "You: ";
+}
+
+.chat-message.other::before {
+    content: "Other: ";
+}
